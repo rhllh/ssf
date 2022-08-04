@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Details</title>
+</head>
+<body th:object="${contact}">
+    <h2><span th:text="*{name}" />'s contact information</h2>
+    <table>
+    <tr>
+        <td><label for="name">Name:</label></td>
+        <td><p th:text="*{name}"></td>
+    </tr>
+    <tr>
+        <td><label for="id">ID:</label></td>
+        <td><p th:text="*{id}"></td>
+    </tr>
+    <tr>
+        <td><label for="email">Email:</label></td>
+        <td><p th:text="*{email}"></td>
+    </tr>
+    <tr>
+        <td><label for="phoneNumber">Phone:</label></td>
+        <td><p th:text="*{phoneNumber}"></td>
+    </tr>
+    </table>
+</body>
+</html>

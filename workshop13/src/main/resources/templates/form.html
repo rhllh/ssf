@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book</title>
+</head>
+<body>
+    <h2>Enter your contact information</h2>
+    <form action="#" th:action="@{/contact}" th:object="${contact}" method="post">
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" name="name" th:field="*{name}">
+        </p>
+        <p>
+            <label for="Email">Email:</label>
+            <input type="text" name="email" th:field="*{email}">
+        </p>
+        <p>
+            <label for="phone">Phone:</label>
+            <input type="text" name="phone" th:field="*{phone}">
+            <button type="submit">Save</button>
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" 
+        integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Excuse Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Generate an Excuse</h1>
+        <form action="/generate" method="post">
+            <table>
+                <tr>
+                    <td><label for="category">Category</label></td>
+                    <td>
+                        <select name="category">
+                            <option value="">Select</option>
+                            <option data-th-value="family">Family</option>
+                            <option data-th-value="office">Office</option>
+                            <option data-th-value="children">Children</option>
+                            <option data-th-value="college">College</option>
+                            <option data-th-value="party">Party</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="count">Count</label></td>
+                    <td><input type="text" name="count"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit">Generate</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
