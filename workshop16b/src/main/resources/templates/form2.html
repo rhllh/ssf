@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" 
+        integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Add game</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Add a new backgammon game</h2>
+        <form action="/add" method="post">
+            <table>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" name="name" th:field="${backgammon.name}" required></td>
+                </tr>
+                <tr>
+                    <td><label for="playerCount">Player Count:</label></td>
+                    <td><input type="text" name="playerCount" th:field="${backgammon.playerCount}" required></td>
+                </tr>
+                <tr>
+                    <td><label for="pieces">Pieces:</label></td>
+                    <td><label for="rulebook">Rulebook:</label></td>
+                    <td><label for="totalCount">Total Count:</label></td>
+                    <td><input type="text" name="totalCount" th:field="${backgammon.pieces.rulebook.totalCount}"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label for="file">File:</label></td>
+                    <td><input type="text" name="file" th:field="${backgammon.pieces.rulebook.file}"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label for="board">Board:</label></td>
+                    <td><label for="totalCount">Total Count:</label></td>
+                    <td><input type="text" name="totalCount"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label for="points">Points:</label></td>
+                    <td><label for="totalCount">Total Count:</label></td>
+                    <td><input type="text" name="totalCount"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><label for="color1Points">Color 1 Points:</label></td>
+                    <td><input type="text" name="color1Points"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><label for="color2Points">Color 2 Points:</label></td>
+                    <td><input type="text" name="color2Points"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label for="counters">Counters:</label></td>
+                    <td><label for="totalCount">Total Count:</label></td>
+                    <td><input type="text" name="totalCount"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label for="color1Counters">Color 1 Counters:</label></td>
+                    <td><input type="text" name="color1Counters"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label for="color2Counters">Color 2 Counters:</label></td>
+                    <td><input type="text" name="color2Counters"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label for="dice">Dice:</label></td>
+                    <td><label for="totalCount">Total Count:</label></td>
+                    <td><input type="text" name="totalCount"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label for="regularDice">Regular Dice:</label></td>
+                    <td><label for="diceCount">Dice Count:</label></td>
+                    <td><input type="text" name="diceCount"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><label for="faces">Faces:</label></td>
+                    <td><input type="text" name="faces"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label for="doublingCubeDice">Doubling Cube Dice:</label></td>
+                    <td><label for="diceCount">Dice Count:</label></td>
+                    <td><input type="text" name="diceCount"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><label for="faces">Faces:</label></td>
+                    <td><input type="text" name="faces"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label for="diceShaker">Dice Shaker:</label></td>
+                    <td><label for="totalCount">Total Count:</label></td>
+                    <td><input type="text" name="totalCount"></td>
+                </tr>
+            </table>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>
